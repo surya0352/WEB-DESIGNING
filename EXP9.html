@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Grid</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    text-align: center;}
+.title {
+    margin-bottom: 20px;
+    font-size: 28px;}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    padding: 0 40px;}
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: left;}
+.card img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;}
+.card h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;}
+.card p {
+    font-size: 14px;
+    color: #555;}
+.price {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;}
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;}}
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+        padding: 0 10px;}}
+    </style>
+</head>
+<body>
+    <h1 class="title">Responsive Product Grid</h1>
+    <div class="product-grid">
+        <div class="card">
+            <img src="product1.png" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>High-quality item with great features.</p>
+            <span class="price">₹499</span>
+        </div>
+        <div class="card">
+            <img src="product2.png" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>Durable and stylish for daily use.</p>
+            <span class="price">₹799</span>
+        </div>
+        <div class="card">
+            <img src="product3.png" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>Lightweight and comfortable.</p>
+            <span class="price">₹1,299</span>
+        </div>
+        <div class="card">
+            <img src="product4.png" alt="Product 4">
+            <h3>Product 4</h3>
+            <p>Trendy design with premium quality.</p>
+            <span class="price">₹999</span>
+        </div>
+    </div>
+</body>
+</html>
