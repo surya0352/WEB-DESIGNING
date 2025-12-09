@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase</title>
+    <style>
+        *{margin: 0;
+    font-family: Georgia, serif;
+    box-sizing: border-box;}
+header {width: 100%;
+    background: #222;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;}
+.logo {font-size: 28px;
+    font-weight: bold;}
+.nav-menu {display: flex;
+    gap: 30px;}
+.nav-menu a {text-decoration: none;
+    color: white;
+    font-size: 18px;}
+.nav-menu a:hover {color: #bbbbbb;}
+.right-menu {display: flex;
+    gap: 20px;}
+.right-menu a {text-decoration: none;
+    color: white;
+    font-size: 18px;}
+.right-menu a:hover {color: #cccccc;}
+.hamburger {display: none;
+    font-size: 32px;
+    cursor: pointer;
+    padding: 5px;}
+#menu-toggle {display: none;}
+.content {padding: 40px;}
+@media (max-width: 900px) {.hamburger {
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);}
+    .nav-menu {display: none;
+        flex-direction: column;
+        background: #333;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        border-top: 2px solid #444;}
+    #menu-toggle:checked + .hamburger + .nav-menu {display: flex;}
+    .right-menu {margin-left: auto;}}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">ShopEase</div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <nav class="nav-menu">
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Categories</a>
+            <a href="#">Deals</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="right-menu">
+            <a href="#" class="cart">Cart 🛒</a>
+            <a href="#" class="login">Login</a>
+        </div>
+    </header>
+    <section class="content">
+        <h1>Welcome to ShopEase!</h1>
+        <p>Your one-stop destination for all shopping needs.</p>
+    </section>
+</body>
+</html>
